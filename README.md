@@ -1,4 +1,4 @@
- Docker and Python
+## Docker and Python
 
 For this assignment, you will be combining Docker with Python to create a program that generates a QR code PNG file containing a URL. The QR code can be viewed with the camera on your phone, allowing a user to click on it and be directed to the target website. This program generates a QR code that links to my GitHub homepage at [https://github.com/Deneisha98](https://github.com/Deneisha98).
 
