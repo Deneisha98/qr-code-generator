@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 import argparse
 from datetime import datetime
-import validators  # Import the validators package
+import validators  # type: ignore # Import the validators package
 
 # Load environment variables
 load_dotenv()
