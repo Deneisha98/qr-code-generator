@@ -1,8 +1,7 @@
  Docker and Python
 
-For this assignment you will be combining Docker with Python to create a program that generates a QR code PNG file that
-contains a URL. The QR code can be viewed with the camera on your phone to allow a user to click on it and send them to
-the target website. You must make your program generate a QR code that takes someone to your GitHub homepage i.e. https://github.com/kaw393939 <replace mine with yours>
+For this assignment, you will be combining Docker with Python to create a program that generates a QR code PNG file containing a URL. The QR code can be viewed with the camera on your phone, allowing a user to click on it and be directed to the target website. This program generates a QR code that links to my GitHub homepage at [https://github.com/Deneisha98](https://github.com/Deneisha98).
+
 
 ## Setup
 1.  Goto Docker.com and Install docker - [https://www.docker.com/get-started/](here)
@@ -10,12 +9,13 @@ the target website. You must make your program generate a QR code that takes som
 
 ## Submission Requirements:
 
-1. Add the QR code image that links to your own GitHub homepage that you generate to the readme.md file, so that it appears below.
+1. QR Code Image: Add the QR code image that links to your own GitHub homepage below.
 
-PUT YOUR QR CODE IMAGE
+   ![QR Code](github_qr.png)
 
-2.  Add an image of viewing the log of successfully creating the QR code below.
- PUT YOUR LOG IMAGE HERE
+2. Log Image: Add an image of the logs showing successful creation of the QR code.
+
+   ![Log Image](log_image.png)
 
  
 ## Lesson Video
@@ -50,14 +50,13 @@ Runs your QR code generator application in detached mode (`-d`) with a container
 
 ```sh
 docker run -d --name qr-generator \
-  -e QR_DATA_URL='https://example.com' \
+  -e QR_DATA_URL='https://github.com/Deneisha98' \
   -e QR_CODE_DIR='qr_codes' \
   -e QR_CODE_FILENAME='exampleQR.png' \
   -e FILL_COLOR='blue' \
   -e BACK_COLOR='yellow' \
   my-qr-app
-```
-Customizes the QR code generation settings through environment variables.
+
 
 ### Sharing a Volume for QR Code Output
 
@@ -81,12 +80,10 @@ docker run -d --name qr-generator \
 
 A comprehensive command that configures the QR code settings and mounts volumes for QR codes.
 
-## Setting the arg for the url from the terminal
+## Setting the Arg for the URL from the Terminal
+
 ```sh
-docker run -v .:/app qrcode --url htt/www.nobdoy.com
-```
-This is how you would set the url for the qr code
-### Basic Docker Commands Explained
+docker run -v .:/app my-qr-app --url https://github.com/Deneisha98
 
 **Building an Image**
 
